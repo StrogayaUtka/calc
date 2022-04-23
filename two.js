@@ -32,6 +32,106 @@ function calculate(action){
     }
 }
 
+window.onload=function(){
+    const btnpercent = document.querySelector("#b1")
+    btnpercent.addEventListener("click", () =>{
+        percent()
+    })
+    const btnreset = document.querySelector("#b2")
+    btnreset.addEventListener("click", () =>{
+        focusField()
+    })
+    const btncleart = document.querySelector("#b3")
+    btncleart.addEventListener("click", () =>{
+        cleareverything()
+    })
+    const btnbackspace = document.querySelector("#b4")
+    btnbackspace.addEventListener("click", () =>{
+        backspace()
+    })
+    const btndenominator = document.querySelector("#b5")
+    btndenominator.addEventListener("click", () =>{
+        denominator()
+    })
+    const btnsquared = document.querySelector("#b6")
+    btnsquared.addEventListener("click", () =>{
+        squared()
+    })
+    const btnsqrt = document.querySelector("#b7")
+    btnsqrt.addEventListener("click", () =>{
+        squareroot()
+    })
+    const btndivision = document.querySelector("#b8")
+    btndivision.addEventListener("click", () =>{
+        calculate(8)
+    })
+    const btn7 = document.querySelector("#b9")
+    btn7.addEventListener("click", () =>{
+        append(7)
+    })
+    const btn8 = document.querySelector("#b10")
+    btn8.addEventListener("click", () =>{
+        append(8)
+    })
+    const btn9 = document.querySelector("#b11")
+    btn9.addEventListener("click", () =>{
+        append(9)
+    })
+    const btnmultiply = document.querySelector("#b12")
+    btnmultiply.addEventListener("click", () =>{
+        calculate(12)
+    })
+    const btn4 = document.querySelector("#b13")
+    btn4.addEventListener("click", () =>{
+        append(4)
+    })
+    const btn5 = document.querySelector("#b14")
+    btn5.addEventListener("click", () =>{
+        append(5)
+    })
+    const btn6 = document.querySelector("#b15")
+    btn6.addEventListener("click", () =>{
+        append(6)
+    })
+    const btnsubtract = document.querySelector("#b16")
+    btnsubtract.addEventListener("click", () =>{
+        calculate(16)
+    })
+    const btn1 = document.querySelector("#b17")
+    btn1.addEventListener("click", () =>{
+        append(1)
+    })
+    const btn2 = document.querySelector("#b18")
+    btn2.addEventListener("click", () =>{
+        append(2)
+    })
+    const btn3 = document.querySelector("#b19")
+    btn3.addEventListener("click", () =>{
+        append(3)
+    })
+    const btnaddition = document.querySelector("#b20")
+    btnaddition.addEventListener("click", () =>{
+        calculate(20)
+    })
+    const btnsign = document.querySelector("#b21")
+    btnsign.addEventListener("click", () =>{
+        changesign()
+    })
+    const btn0 = document.querySelector("#b22")
+    btn0.addEventListener("click", () =>{
+        append(0)
+    })
+    const btndot = document.querySelector("#b23")
+    btndot.addEventListener("click", () =>{
+        append(10)
+    })
+    const btnequals = document.querySelector("#b24")
+    btnequals.addEventListener("click", () =>{
+        equals()
+    })
+}
+
+
 function percent(){
     const inputNode = document.querySelector("#userinput")
     //inputNode.value = +(cache.at (-1)) / 100 * +inputNode.value
@@ -162,8 +262,3 @@ function err(){
     inputNode.value = ""
     inputNode.focus()
 }
-
-// После каждого нажатия кнопки действия сохранять поле ввода в массив, и доствать оттуда через -1 индекс
-
-//Добавить на все кнопки EvenListener'ы, при нажатии проверять пустой ли кеш, и, если не пустой, выполнять операцию нового числа с последним из кеша,
-//после чего вводить всё в поле InputNode
